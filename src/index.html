@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="questionList">
+<head>
+    <meta charset="utf-8"/>
+    <title>AngularJS Question List</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="app/app.css">
+</head>
+<body>
+    <div>
+        <header>            
+            <h1>AngularJS Question List</h1>
+        </header>
+		<div ng-controller="MainController">
+			<p>{{::questions.question}}</p>
+			<p ng-repeat="answer in questions.answers">
+				<button ng-click="vote(answer)">{{answer.answer}}</button> - <span>{{answer.count}}</span>
+			</p>
+			<p>{{winner|isWinner}}</p>
+		</div>
+	</div>	
+	<script src="https://code.angularjs.org/1.4.0/angular.js"></script>
+	<script src="https://code.angularjs.org/1.4.0/angular-route.min.js"></script>
+	<script src="app/app.module.js"></script>
+	<script src="app/question-list/question-list.controller.js"></script>
+	<script src="app/components/filters/is-winner.filter.js"></script>
+	
+</body>
+</html>
