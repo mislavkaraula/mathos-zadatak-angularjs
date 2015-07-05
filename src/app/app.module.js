@@ -1,1 +1,3 @@
-angular.module('questionList',[]);
+angular.module('questionList',[
+	'ngRoute'
+]);

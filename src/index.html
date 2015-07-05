@@ -11,18 +11,26 @@
         <header>            
             <h1>AngularJS Question List</h1>
         </header>
-		<div ng-controller="MainController">
+		<a href="#/" title="Questions">Questions</a>
+		<div ng-view="">
+			
+		</div>
+		<!--<div ng-controller="MainController">
 			<p>{{::questions.question}}</p>
 			<p ng-repeat="answer in questions.answers">
 				<button ng-click="vote(answer)">{{answer.answer}}</button> - <span>{{answer.count}}</span>
 			</p>
 			<p>{{winner|isWinner}}</p>
-		</div>
+		</div>-->
 	</div>	
 	<script src="https://code.angularjs.org/1.4.0/angular.js"></script>
 	<script src="https://code.angularjs.org/1.4.0/angular-route.min.js"></script>
 	<script src="app/app.module.js"></script>
+	<script src="app/app.config.js"></script>
+	<script src="app/components/directives/answer-list/answer-list.directive.js"></script>
 	<script src="app/question-list/question-list.controller.js"></script>
+	<script src="app/question-list/question-list.service.js"></script>
+	<script src="app/question/question.controller.js"></script>
 	<script src="app/components/filters/is-winner.filter.js"></script>
 	
 </body>
