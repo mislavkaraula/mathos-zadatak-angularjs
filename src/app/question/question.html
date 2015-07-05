@@ -1,0 +1,6 @@
+<div>	
+	<p>{{selectedItem.question}} ({{selectedItem.description}})</p>
+	<div ng-controller="QuestionController">
+		<answer-list selected-item="selectedItem" selected-item-click="vote(id)" winner="winner"></answers>
+	</div>
+</div>
